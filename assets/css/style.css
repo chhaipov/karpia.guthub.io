@@ -7546,18 +7546,20 @@ select.form-control {
 }
 
 .contact {
-    height: 60vh;
+    max-height: 60vh;
+    overflow-y: auto;
     max-width: 100%;
     box-shadow: 0 0.2rem 0.5 #0006;
     border-radius: 1rem;
     overflow: hidden;
     display: flex;
+    
 }
 
 .map,
 .form {
     flex: 1;
-    height: 100%;
+    height: auto;
 }
 
 .map iframe {
@@ -7571,6 +7573,7 @@ select.form-control {
     flex-direction: column;
     position: relative;
     justify-content: space-evenly;
+    padding: 1rem 0;
 }
 
 .form::before {
@@ -7587,7 +7590,7 @@ select.form-control {
 .form h1 {
     color: #fff;
     font: 500 1.8rem sans-serif;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
 }
 
 .form form {
@@ -7640,7 +7643,7 @@ select.form-control {
 
 @media (max-width: 768px) {
     .contact {
-        height: 100vh;
+        max-height: 100vh;
         width: 100%;
         border-radius: 1rem;
         display: flex;
@@ -7697,7 +7700,7 @@ select.form-control {
 
 @media (max-width: 1200px) {
     .contact {
-        height: 50vh;
+        max-height: 50vh;
         max-width: 100%;
         box-shadow: 0 0.2rem 0.5 #0006;
         border-radius: 1rem;
@@ -7708,7 +7711,7 @@ select.form-control {
 @media (max-width: 1400px) {
 
     .contact {
-        height: 60vh;
+        max-height: 60vh;
         max-width: 100%;
         box-shadow: 0 0.2rem 0.5 #0006;
         border-radius: 1rem;
