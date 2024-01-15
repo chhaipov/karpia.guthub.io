@@ -2,13 +2,18 @@ jQuery(
   (function ($) {
     "use strict";
     $(document).ready(function () {
-      $(document).ajaxError(function (event, jqxhr, settings, thrownError) {
-        if (jqxhr.status == 404) {
-          // Redirect to the 404.html page
-          window.location.href = "/404.html";
-        }
+      $('a[href^="#"]').on('click', function (event) {
+          event.preventDefault();
+
+          let hash = this.hash;
+
+          $('html, body').animate({
+              scrollTop: $(hash).offset().top
+          }, 800, function () {
+              window.location.hash = hash;
+          });
       });
-    });
+  });
     jQuery(".mean-menu").meanmenu({ meanScreenWidth: "1199" });
     $(window).on("scroll", function () {
       if ($(this).scrollTop() > 50) {

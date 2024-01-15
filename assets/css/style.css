@@ -1391,8 +1391,8 @@ select.form-control {
     height: 5px;
     background: #fff;
     position: absolute;
-    -webkit-animation: preloader_1 1.5s infinite ease-in-out;
-    animation: preloader_1 1.5s infinite ease-in-out;
+    -webkit-animation: preloader_1 1s infinite ease-in-out;
+    animation: preloader_1 1s infinite ease-in-out;
 }
 .preloader-content span:nth-child(2) {
     left: 11px;
@@ -1469,8 +1469,8 @@ select.form-control {
 .pre-loaded .preloader {
     visibility: hidden;
     opacity: 0;
-    -webkit-transition: all 0.3s 1s ease-out;
-    transition: all 0.3s 1s ease-out;
+    -webkit-transition: all 0.3s .3s ease-out;
+    transition: all 0.3s .3s ease-out;
 }
 
 .fixed-top.non-fixed {
@@ -2735,7 +2735,7 @@ select.form-control {
     transition: all 0.3s linear;
 }
 .mobile-nav {
-    padding: 10px 40px;
+    padding: 0 40px;
     display: block;
 }
 .mobile-nav .navbar-option {
