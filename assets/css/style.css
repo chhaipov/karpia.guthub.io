@@ -4434,7 +4434,7 @@ select.form-control {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #6749f1;
+    background-color: #422C75;
     padding: 12px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -7743,7 +7743,10 @@ select.form-control {
     transition: transform 0.3s ease;
 }
 
+
+
 @media (max-width: 1200px) {
+    
     .contact {
         max-height: 50vh;
         max-width: 100%;
@@ -7754,6 +7757,7 @@ select.form-control {
 }
 
 @media (max-width: 1400px) {
+    
     .contact {
         max-height: 60vh;
         max-width: 100%;
@@ -7764,6 +7768,7 @@ select.form-control {
 }
 
 @media (max-width: 2048px) {
+    
     .main-page-wrapper {
         width: 100%;
     }
