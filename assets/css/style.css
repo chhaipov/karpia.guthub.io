@@ -7395,7 +7395,7 @@ select.form-control {
 .scroll-top {
     position: fixed;
     bottom: 100px;
-    right: 20px;
+    left: 20px;
     cursor: pointer;
     z-index: 11;
     -webkit-transform: translateY(10px);
