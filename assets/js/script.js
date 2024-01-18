@@ -61,9 +61,13 @@ jQuery(
             dots: false,
             responsive: {
                 0: { items: 1 },
-                476: { items: 2 },
-                768: { items: 3 },
-                1025: { items: 4 },
+                400: { items: 1 },
+                768: { items: 2 },
+                992: { items: 2 },
+                1025: { items: 2 },
+                1200: { items: 3 },
+                1400: { items: 3 },
+                2048: { items: 4 },
             },
         });
         $(".play").on("click", function () {
@@ -99,10 +103,6 @@ jQuery(
             fixedContentPos: false,
         });
 
-        
-        
-    
-     
         $(".side-topbar-option").on("click", function () {
             $(".side-modal-wrapper").addClass("side-modal-wrapper-show");
             $(".side-modal").addClass("side-modal-show");

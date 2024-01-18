@@ -1255,14 +1255,14 @@ select.form-control {
 }
 .page-bg-1 {
     background-image: ---webkit-gradient(
-            linear,
-            left top,
-            right top,
-            color-stop(100%, rgba(22, 15, 48, 0.9)),
-            color-stop(0%, rgba(36, 22, 99, 0.11)),
-            color-stop(0%, rgba(36, 22, 99, 0.11)),
-            to(rgba(22, 15, 48, 0.9))
-        ),
+                linear,
+                left top,
+                right top,
+                color-stop(100%, rgba(22, 15, 48, 0.9)),
+                color-stop(0%, rgba(36, 22, 99, 0.11)),
+                color-stop(0%, rgba(36, 22, 99, 0.11)),
+                to(rgba(22, 15, 48, 0.9))
+            ),
         url(../images/page-bg/bg-1.jpg);
     background-image: linear-gradient(
             90deg,
@@ -1275,14 +1275,14 @@ select.form-control {
 }
 .page-bg-2 {
     background-image: ---webkit-gradient(
-            linear,
-            left top,
-            right top,
-            color-stop(100%, rgba(22, 15, 48, 0.9)),
-            color-stop(0%, rgba(36, 22, 99, 0.11)),
-            color-stop(0%, rgba(36, 22, 99, 0.11)),
-            to(rgba(22, 15, 48, 0.9))
-        ),
+                linear,
+                left top,
+                right top,
+                color-stop(100%, rgba(22, 15, 48, 0.9)),
+                color-stop(0%, rgba(36, 22, 99, 0.11)),
+                color-stop(0%, rgba(36, 22, 99, 0.11)),
+                to(rgba(22, 15, 48, 0.9))
+            ),
         url(../images/page-bg/bg-2.jpg);
     background-image: linear-gradient(
             90deg,
@@ -7701,30 +7701,46 @@ select.form-control {
 #img-setting {
     max-width: 100px;
     max-height: 100px;
+    object-fit: fill;
 }
 
 .fa-facebook {
-    transition: .2s ease-in
+    transition: 0.2s ease-in;
 }
 
 .fa-telegram {
-    transition: .2s ease-in
+    transition: 0.2s ease-in;
 }
 
 .fa-linkedin {
-    transition: .2s ease-in;
+    transition: 0.2s ease-in;
 }
 
 .fa-facebook:hover {
-    color: #316FF6;
+    color: #316ff6;
 }
 
 .fa-telegram:hover {
-    color: #229ED9;
+    color: #229ed9;
 }
 
 .fa-linkedin:hover {
-    color: #0077b5 ;
+    color: #0077b5;
+}
+
+.owl-item {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.owl-item:hover {
+    transform: scale(1.08);
+    transition: transform 0.3s ease;
+}
+
+.partner-carousel .owl-item:hover {
+    transform: scale(1.15);
+    transition: transform 0.3s ease;
 }
 
 @media (max-width: 1200px) {
