@@ -7394,7 +7394,7 @@ select.form-control {
 }
 .scroll-top {
     position: fixed;
-    bottom: 60px;
+    bottom: 100px;
     right: 20px;
     cursor: pointer;
     z-index: 11;
