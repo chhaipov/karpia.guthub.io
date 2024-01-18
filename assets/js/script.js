@@ -46,31 +46,20 @@ jQuery(
       nav: false,
       dots: true,
     });
-
-    let owl = $(".owl-carousel");
-    owl.owlCarousel({
-      items: 3,
+    $(".feature-card-items").owlCarousel({
       loop: true,
-      margin: 10,
+      items: 4,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 3000,
       autoplayHoverPause: true,
+      smartSpeed: 1500,
+      nav: false,
+      dots: false,
       responsive: {
-        0: {
-          items: 1,
-        },
-        476: {
-          items: 1,
-        },
-        600: {
-          items: 1,
-        },
-        1000: {
-          items: 2,
-        },
-        1280: {
-          items: 3,
-        },
+        0: { items: 1 },
+        476: { items: 2 },
+        768: { items: 3 },
+        1025: { items: 4 },
       },
     });
     $(".play").on("click", function () {
@@ -84,7 +73,7 @@ jQuery(
       loop: true,
       items: 5,
       autoplay: true,
-      autoplaySpeed: 5000,
+      autoplaySpeed: 4000,
       autoplayHoverPause: true,
       smartSpeed: 3000,
       nav: false,
@@ -273,30 +262,6 @@ jQuery(
         tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
       },
     });
-    function newCounter() {
-      var countDate = new Date("15 October 2022 9:56:00");
-      var sec = 1000;
-      var min = sec * 60;
-      var hr = min * 60;
-      var day = hr * 24;
-      var today = new Date();
-      var distance = countDate - today;
-      var days = Math.floor(distance / day);
-      var hours = Math.floor((distance % day) / hr);
-      var mins = Math.floor((distance % hr) / min);
-      var secs = Math.floor((distance % min) / sec);
-      $(".day1").html(days + "<span>Days</span>");
-      $(".hr1").html(hours + "<span>Hrs</span>");
-      $(".min1").html(mins + "<span>Mins</span>");
-      $(".sec1").html(secs + "<span>Sec</span>");
-      if (distance < 0) {
-        clearInterval(dealCounter1);
-        $(".new-counter").html("Session Expired");
-      }
-    }
-    setInterval(function () {
-      newCounter();
-    }, 1000);
     var $grid = $(".product-tab-gallery").isotope({
       itemSelector: ".element-item",
       layoutMode: "fitRows",
@@ -329,71 +294,7 @@ jQuery(
       $(".side-modal-wrapper").removeClass("side-modal-wrapper-show");
       $(".side-modal").removeClass("side-modal-show");
     });
-    $(".counter-num").counterUp({ time: 1000 });
-    $("#contactForm, .newsletter-form")
-      .validator()
-      .on("submit", function (event) {
-        if (event.isDefaultPrevented()) {
-          formErrorSub();
-          submitMSGSub(false, "Please enter your email correctly.");
-        } else {
-          event.preventDefault();
-        }
-      });
-    function callbackFunction(resp) {
-      if (resp.result === "success") {
-        formSuccessSub();
-      } else {
-        formErrorSub();
-      }
-    }
-    function formSuccessSub() {
-      $(".newsletter-form")[0].reset();
-      submitMSGSub(true, "Thank you for subscribing!");
-      setTimeout(function () {
-        $("#validator-newsletter").addClass("hide");
-      }, 4000);
-    }
-    function formErrorSub() {
-      $(".newsletter-form").addClass("animate__animated animate__shakeX");
-      setTimeout(function () {
-        $(".newsletter-form").removeClass("animate__animated animate__shakeX");
-      }, 1000);
-    }
-    function submitMSGSub(valid, msg) {
-      if (valid) {
-        var msgClasses = "validation-success";
-      } else {
-        var msgClasses = "validation-danger";
-      }
-      $("#validator-newsletter").removeClass().addClass(msgClasses).text(msg);
-    }
-    $(".newsletter-form").ajaxChimp({
-      url: "https://hibootstrap.us20.list-manage.com/subscribe/post?u=60e1ffe2e8a68ce1204cd39a5&amp;id=42d6d188d9",
-      callback: callbackFunction,
-    });
-    // $("body").append(
-    //   "<div class='switch-box'><label id='switch' class='switch'><input type='checkbox' onchange='toggleTheme()' id='slider'><span class='slider round'></span></label></div>"
-    // );
+    
   })(jQuery)
 );
-// function setTheme(themeName) {
-//   localStorage.setItem("cyco_theme", themeName);
-//   document.documentElement.className = themeName;
-// }
-// function toggleTheme() {
-//   if (localStorage.getItem("cyco_theme") === "theme-dark") {
-//     setTheme("theme-light");
-//   } else {
-//     setTheme("theme-dark");
-//   }
-// }
-// (function () {
-//   if (localStorage.getItem("cyco_theme") === "theme-dark") {
-//     setTheme("theme-dark");
-//     document.getElementById("slider").checked = false;
-//   } else {
-//     setTheme("theme-light");
-//     document.getElementById("slider").checked = true;
-//   }
-// })();
+

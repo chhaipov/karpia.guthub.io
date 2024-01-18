@@ -1469,8 +1469,8 @@ select.form-control {
 .pre-loaded .preloader {
     visibility: hidden;
     opacity: 0;
-    -webkit-transition: all 0.3s .3s ease-out;
-    transition: all 0.3s .3s ease-out;
+    -webkit-transition: all 0.3s 0.3s ease-out;
+    transition: all 0.3s 0.3s ease-out;
 }
 
 .fixed-top.non-fixed {
@@ -7553,7 +7553,6 @@ select.form-control {
     border-radius: 1rem;
     overflow: hidden;
     display: flex;
-    
 }
 
 .map,
@@ -7673,6 +7672,7 @@ select.form-control {
         border-bottom-right-radius: 1rem;
         border-bottom-left-radius: 1rem;
         width: 100%;
+        color: white;
     }
 
     .form input:not(:first-child),
@@ -7698,6 +7698,35 @@ select.form-control {
     }
 }
 
+#img-setting {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.fa-facebook {
+    transition: .2s ease-in
+}
+
+.fa-telegram {
+    transition: .2s ease-in
+}
+
+.fa-linkedin {
+    transition: .2s ease-in;
+}
+
+.fa-facebook:hover {
+    color: #316FF6;
+}
+
+.fa-telegram:hover {
+    color: #229ED9;
+}
+
+.fa-linkedin:hover {
+    color: #0077b5 ;
+}
+
 @media (max-width: 1200px) {
     .contact {
         max-height: 50vh;
@@ -7709,7 +7738,6 @@ select.form-control {
 }
 
 @media (max-width: 1400px) {
-
     .contact {
         max-height: 60vh;
         max-width: 100%;
