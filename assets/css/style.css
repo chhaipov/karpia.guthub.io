@@ -3670,19 +3670,14 @@ select.form-control {
     padding-bottom: 190px;
 }
 .header-bg-one {
-    background-image: url(../images/homepage-one/hero.jpg);
+    background-image: url(../images/top-cover.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding-top: 270px;
     padding-bottom: 160px;
 }
-.header-bg-three {
-    background-image: url(../images/homepage-three/hero.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
+
 .header-bg-three:before {
     content: "";
     position: absolute;
@@ -7741,6 +7736,10 @@ select.form-control {
 .partner-carousel .owl-item:hover {
     transform: scale(1.15);
     transition: transform 0.3s ease;
+}
+
+#top-slide-text {
+    font-size: x-large;
 }
 
 
