@@ -7724,24 +7724,51 @@ select.form-control {
 }
 
 #top-slide-text {
-    font-size: x-large;
+    font-size: 1rem;
 }
 
-
-
-@media (max-width: 1200px) {
-    
-    .contact {
-        max-height: 50vh;
-        max-width: 100%;
-        box-shadow: 0 0.2rem 0.5 #0006;
-        border-radius: 1rem;
-        overflow: hidden;
+/* Small screens (max-width: 300px) */
+@media (max-width: 300px) {
+    .card .text h5 {
+        font-size: 0.3rem;
+        word-break: normal;
     }
 }
 
+/* Medium screens (max-width: 420px) */
+@media (max-width: 420px) {
+    .card .text h5 {
+        font-size: 0.5rem;
+        word-break: normal;
+    }
+}
+
+/* Small to medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .card .text h5 {
+        font-size: 1rem;
+        word-break: normal;
+    }
+
+    #top-slide-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Medium to large screens (max-width: 992px) */
+@media (max-width: 992px) {
+    .card .text h5 {
+        font-size: 1rem;
+        word-break: normal;
+    }
+
+    #top-slide-text {
+        font-size: 1rem;
+    }
+}
+
+/* Large screens (max-width: 1400px) */
 @media (max-width: 1400px) {
-    
     .contact {
         max-height: 60vh;
         max-width: 100%;
@@ -7749,17 +7776,24 @@ select.form-control {
         border-radius: 1rem;
         overflow: hidden;
     }
+
+    .main-page-wrapper {
+        width: 75%;
+    }
 }
 
+/* Extra-large screens (max-width: 2048px) */
 @media (max-width: 2048px) {
-    
     .main-page-wrapper {
         width: 100%;
     }
 
-    @media (max-width: 1400px) {
-        .main-page-wrapper {
-            width: 75%;
-        }
+    #top-slide-text {
+        font-size: 1.5rem;
+    }
+
+    .card .text h5 {
+        font-size: 1.2rem;
+        word-break: normal;
     }
 }
