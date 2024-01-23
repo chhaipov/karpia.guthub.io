@@ -53,7 +53,7 @@ jQuery(
         $(".feature-card-items").owlCarousel({
             loop: true,
             items: 4,
-            autoplay: false,
+            autoplay: true,
             autoplaySpeed: 3000,
             autoplayHoverPause: true,
             smartSpeed: 1500,
